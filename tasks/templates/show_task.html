@@ -6,19 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    {% comment %} <div>
+    <div>
         <ul>
             {% for task in tasks %}
                 <li> 
-                    <P>{{task.title}}</P>
-                    <span>{{task.status}}</span>
+                    <p>{{task.title}}</p>
+                    {% for emp in task.assigned_to.all %}
+                        <p>{{emp.name}}</p>
+                    {% endfor %}
+                    
                 </li>
             {% endfor %}
         </ul>
-    </div> {% endcomment %}
-  
-    <div>
-        {{task}}
     </div>
+  
+    
 </body>
 </html>
