@@ -6,16 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    {% comment %} <div>
         <ul>
             {% for task in tasks %}
                 <li> 
-                    <P>{{task.task}}</P>
-                    <span>{{task.priority}}</span>
+                    <P>{{task.title}}</P>
+                    <span>{{task.status}}</span>
                 </li>
             {% endfor %}
         </ul>
+    </div> {% endcomment %}
+  
+    <div>
+        {{task}}
     </div>
-    
 </body>
 </html>
